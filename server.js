@@ -6,6 +6,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static("."));
 
+app.get("/__server_check", (req, res) => {
+    res.type("text").send("BloxLab Node server is running");
+});
+
 app.get("/api/test", (req, res) => {
     res.json({
         server: "online",
