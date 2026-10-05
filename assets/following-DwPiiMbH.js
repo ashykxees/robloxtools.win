@@ -1,1 +1,0 @@
-import{d as e,t}from"./index-_aqwpVsd.js";var n=e(),r=()=>(0,n.jsx)(t,{toolKey:`following`});export{r as component};
