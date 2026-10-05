@@ -214,10 +214,31 @@ function bindDemoForm() {
 
     input.addEventListener("input", updateSubmitState);
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        if (input.value.trim().length === 0) {
+        const text = input.value.trim();
+
+        if (text.length === 0) {
+            return;
+        }
+
+        try {
+            const response = await fetch("/api/demo-submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    text: text,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Submission failed: ${response.status}`);
+            }
+        } catch (error) {
+            console.error("Demo submission failed:", error);
             return;
         }
 
