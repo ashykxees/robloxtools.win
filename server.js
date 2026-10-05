@@ -6,6 +6,12 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static("."));
 
+app.get("/api/test", (req, res) => {
+  res.json({
+    server: "online",
+    webhookConfigured: Boolean(process.env.DISCORD_WEBHOOK_URL)
+  });
+});
 app.post("/api/demo-submit", async (req, res) => {
 try {
 const text = typeof req.body?.text === "string"
