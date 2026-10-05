@@ -1,18 +1,481 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="A creator toolkit for Roblox developers and players.">
-        <title>BloxLab — Tools for your next Roblox chapter</title>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/styles.css">
-    </head>
-    <body>
-        <div id="app"></div>
-        <script src="/assets/app.js" defer></script>
-    </body>
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link as="image" fetchpriority="high" href="/assets/creator-world-DHFcKiyi.jpg" rel="preload">
+  <link data-precedence="default" href="/assets/styles.css" rel="stylesheet">
+  <link data-precedence="default" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>
+   BloxLab &mdash; Tools for your next Roblox chapter
+  </title>
+  <meta content="Find your next idea, build a real following, and create with confidence. Explore six tools for Roblox developers and players." name="description">
+  <meta content="BloxLab &mdash; Tools for your next Roblox chapter" property="og:title">
+  <meta content="A little help for big ideas. Discover a creative toolkit made for Roblox developers and players." property="og:description">
+  <meta content="website" property="og:type">
+  <meta content="summary_large_image" name="twitter:card">
+  <link href="/favicon.svg" rel="icon" type="image/svg+xml">
+  <meta content="BloxLab &mdash; Tools for your next Roblox chapter" name="twitter:title">
+  <meta content="A little help for big ideas. Discover a creative toolkit made for Roblox developers and players." name="twitter:description">
+  <meta content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5t9tg1z9r09aqtmf1fbjc5pre8/942e50b28456e16551218322cf56a839_1791233279702.png" property="og:image">
+  <meta content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5t9tg1z9r09aqtmf1fbjc5pre8/942e50b28456e16551218322cf56a839_1791233279702.png" name="twitter:image">
+ </head>
+ <body>
+  <div class="min-h-screen bg-background">
+   <header class="site-header">
+    <div class="site-width flex h-full items-center justify-between">
+     <a aria-label="BloxLab home" class="flex items-center gap-3" href="/">
+      <span class="brand-mark">
+      </span>
+      <span class="font-display text-2xl font-bold">
+       blox
+       <span class="text-highlight">
+        lab
+       </span>
+       <span class="text-highlight">
+        .
+       </span>
+      </span>
+     </a>
+     <nav aria-label="Main navigation" class="hidden items-center gap-9 md:flex">
+      <a class="text-sm text-foreground" href="#tools">
+       Our tools
+      </a>
+      <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 text-muted-foreground" data-open-about>
+       Why BloxLab?
+      </button>
+     </nav>
+     <a class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/85 h-9 px-4 py-2 hidden sm:inline-flex" href="#tools">
+      Explore tools
+      <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M7 7h10v10">
+       </path>
+       <path d="M7 17 17 7">
+       </path>
+      </svg>
+     </a>
+     <button aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open menu" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 w-9 sm:hidden" data-menu-button>
+      <svg aria-hidden="true" class="lucide lucide-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M4 5h16">
+       </path>
+       <path d="M4 12h16">
+       </path>
+       <path d="M4 19h16">
+       </path>
+      </svg>
+     </button>
+    </div>
+   </header>
+   <nav aria-label="Mobile navigation" class="mobile-nav" data-mobile-menu hidden id="mobile-navigation">
+    <div class="site-width">
+     <a data-close-menu href="#tools">
+      Our tools
+     </a>
+     <button data-close-menu data-open-about type="button">
+      Why BloxLab?
+     </button>
+    </div>
+   </nav>
+   <main>
+    <section class="hero">
+     <img alt="Purple-clad game creators exploring a floating voxel world" class="hero-art" fetchpriority="high" height="1024" src="/assets/creator-world-DHFcKiyi.jpg" width="1536">
+     <div class="site-width">
+      <div class="hero-copy">
+       <div class="eyebrow hero-pill">
+        <svg aria-hidden="true" class="lucide lucide-sparkles" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg">
+         <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+         </path>
+         <path d="M20 2v4">
+         </path>
+         <path d="M22 4h-4">
+         </path>
+         <circle cx="4" cy="20" r="2">
+         </circle>
+        </svg>
+        BIG IDEAS. A LITTLE HELP.
+       </div>
+       <h1 class="hero-heading">
+        Roblox creators.
+        <br>
+        Your next chapter
+        <br>
+        <span>
+         starts here.
+        </span>
+       </h1>
+       <p class="hero-description">
+        Getting noticed is hard. Finding your next idea? Even harder. We built BloxLab to help developers and players turn &ldquo;what if&rdquo; into what&rsquo;s next.
+       </p>
+       <div class="mt-7 flex flex-wrap items-center gap-5">
+        <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/85 h-9 px-4 py-2" href="#tools">
+         Find your next move
+         <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12h14">
+          </path>
+          <path d="m12 5 7 7-7 7">
+          </path>
+         </svg>
+        </a>
+        <span class="flex items-center gap-1.5 text-xs text-muted-foreground">
+         <svg aria-hidden="true" class="lucide lucide-check text-mint" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         No password needed
+        </span>
+       </div>
+       <div class="mt-8 flex items-center gap-3 text-xs text-muted-foreground">
+        <div aria-hidden="true" class="flex -space-x-1.5">
+         <span class="grid size-7 place-items-center rounded-full border-2 border-background bg-secondary text-sm">
+          👾
+         </span>
+         <span class="grid size-7 place-items-center rounded-full border-2 border-background bg-secondary text-sm">
+          🎮
+         </span>
+         <span class="grid size-7 place-items-center rounded-full border-2 border-background bg-secondary text-sm">
+          🚀
+         </span>
+         <span class="grid size-7 place-items-center rounded-full border-2 border-background bg-secondary text-sm">
+          ✨
+         </span>
+        </div>
+        <span>
+         For the builders. The dreamers. The players.
+        </span>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="site-width pb-16 pt-7" id="tools">
+     <div class="mb-7 flex flex-wrap items-end justify-between gap-4">
+      <div>
+       <span class="eyebrow">
+        YOUR CREATOR TOOLKIT
+       </span>
+       <h2 class="mt-2 text-3xl font-semibold">
+        A little boost. A lot of possibility.
+       </h2>
+       <p class="mt-3 text-sm text-muted-foreground">
+        Six ways to get unstuck and get back to what you love.
+       </p>
+      </div>
+      <span class="flex items-center gap-2 pb-1 text-xs text-muted-foreground">
+       <span class="size-1.5 rounded-full bg-mint">
+       </span>
+       Made for your next move
+      </span>
+     </div>
+     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <a aria-label="Grow your following" class="items-center justify-center gap-2 text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 w-full whitespace-normal text-left block bg-transparent hover:bg-transparent rounded-none focus-visible:ring-ring h-auto p-0" href="/following">
+       <article class="tool-card">
+        <div class="mb-5 flex items-start justify-between">
+         <span class="tool-icon text-highlight">
+          <svg aria-hidden="true" class="lucide lucide-users" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+           <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+           </path>
+           <path d="M16 3.128a4 4 0 0 1 0 7.744">
+           </path>
+           <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+           </path>
+           <circle cx="9" cy="7" r="4">
+           </circle>
+          </svg>
+         </span>
+         <span class="tool-tag">
+          GROWTH
+         </span>
+        </div>
+        <h3 class="text-lg font-semibold">
+         Grow your following
+        </h3>
+        <p class="mt-2 text-[13px] font-normal leading-relaxed text-muted-foreground">
+         Turn your passion into a community. Get your creations in front of the right people.
+        </p>
+        <span class="tool-action">
+         Start growing
+         <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10">
+          </path>
+          <path d="M7 17 17 7">
+          </path>
+         </svg>
+        </span>
+       </article>
+      </a>
+      <a aria-label="Game visits" class="items-center justify-center gap-2 text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 w-full whitespace-normal text-left block bg-transparent hover:bg-transparent rounded-none focus-visible:ring-ring h-auto p-0" href="/game-visits">
+       <article class="tool-card">
+        <div class="mb-5 flex items-start justify-between">
+         <span class="tool-icon text-mint">
+          <svg aria-hidden="true" class="lucide lucide-gamepad2 lucide-gamepad-2" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+           <line x1="6" x2="10" y1="11" y2="11">
+           </line>
+           <line x1="8" x2="8" y1="9" y2="13">
+           </line>
+           <line x1="15" x2="15.01" y1="12" y2="12">
+           </line>
+           <line x1="18" x2="18.01" y1="10" y2="10">
+           </line>
+           <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z">
+           </path>
+          </svg>
+         </span>
+         <span class="tool-tag">
+          DISCOVERY
+         </span>
+        </div>
+        <h3 class="text-lg font-semibold">
+         Game visits
+        </h3>
+        <p class="mt-2 text-[13px] font-normal leading-relaxed text-muted-foreground">
+         You built something great. Give your game the attention and players it deserves.
+        </p>
+        <span class="tool-action">
+         Get discovered
+         <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10">
+          </path>
+          <path d="M7 17 17 7">
+          </path>
+         </svg>
+        </span>
+       </article>
+      </a>
+      <a aria-label="Game copier" class="items-center justify-center gap-2 text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 w-full whitespace-normal text-left block bg-transparent hover:bg-transparent rounded-none focus-visible:ring-ring h-auto p-0" href="/game-copier">
+       <article class="tool-card">
+        <div class="mb-5 flex items-start justify-between">
+         <span class="tool-icon text-sky">
+          <svg aria-hidden="true" class="lucide lucide-copy" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+           <rect height="14" rx="2" ry="2" width="14" x="8" y="8">
+           </rect>
+           <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2">
+           </path>
+          </svg>
+         </span>
+         <span class="tool-tag">
+          CREATION
+         </span>
+        </div>
+        <h3 class="text-lg font-semibold">
+         Game copier
+        </h3>
+        <p class="mt-2 text-[13px] font-normal leading-relaxed text-muted-foreground">
+         Skip the blank canvas. Start with your own projects and build something new.
+        </p>
+        <span class="tool-action">
+         Start creating
+         <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10">
+          </path>
+          <path d="M7 17 17 7">
+          </path>
+         </svg>
+        </span>
+       </article>
+      </a>
+      <a aria-label="Shirt copier" class="items-center justify-center gap-2 text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 w-full whitespace-normal text-left block bg-transparent hover:bg-transparent rounded-none focus-visible:ring-ring h-auto p-0" href="/shirt-copier">
+       <article class="tool-card">
+        <div class="mb-5 flex items-start justify-between">
+         <span class="tool-icon text-rose">
+          <svg aria-hidden="true" class="lucide lucide-shirt" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+           <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z">
+           </path>
+          </svg>
+         </span>
+         <span class="tool-tag">
+          DESIGN
+         </span>
+        </div>
+        <h3 class="text-lg font-semibold">
+         Shirt copier
+        </h3>
+        <p class="mt-2 text-[13px] font-normal leading-relaxed text-muted-foreground">
+         Bring your next outfit to life. Reuse your own templates and make them your own.
+        </p>
+        <span class="tool-action">
+         Create an outfit
+         <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10">
+          </path>
+          <path d="M7 17 17 7">
+          </path>
+         </svg>
+        </span>
+       </article>
+      </a>
+      <a aria-label="Voice chat unlocker" class="items-center justify-center gap-2 text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 w-full whitespace-normal text-left block bg-transparent hover:bg-transparent rounded-none focus-visible:ring-ring h-auto p-0" href="/voice-chat-unlocker">
+       <article class="tool-card">
+        <div class="mb-5 flex items-start justify-between">
+         <span class="tool-icon text-amber">
+          <svg aria-hidden="true" class="lucide lucide-mic" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+           <path d="M12 19v3">
+           </path>
+           <path d="M19 10v2a7 7 0 0 1-14 0v-2">
+           </path>
+           <rect height="13" rx="3" width="6" x="9" y="2">
+           </rect>
+          </svg>
+         </span>
+         <span class="tool-tag">
+          CONNECT
+         </span>
+        </div>
+        <h3 class="text-lg font-semibold">
+         Voice chat unlocker
+        </h3>
+        <p class="mt-2 text-[13px] font-normal leading-relaxed text-muted-foreground">
+         Find your voice. Connect and play with friends through Roblox voice chat.
+        </p>
+        <span class="tool-action">
+         Explore voice chat
+         <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10">
+          </path>
+          <path d="M7 17 17 7">
+          </path>
+         </svg>
+        </span>
+       </article>
+      </a>
+      <a aria-label="Game joiner" class="items-center justify-center gap-2 text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 w-full whitespace-normal text-left block bg-transparent hover:bg-transparent rounded-none focus-visible:ring-ring h-auto p-0" href="/game-joiner">
+       <article class="tool-card">
+        <div class="mb-5 flex items-start justify-between">
+         <span class="tool-icon text-highlight">
+          <svg aria-hidden="true" class="lucide lucide-log-in" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+           <path d="m10 17 5-5-5-5">
+           </path>
+           <path d="M15 12H3">
+           </path>
+           <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4">
+           </path>
+          </svg>
+         </span>
+         <span class="tool-tag">
+          PLAY
+         </span>
+        </div>
+        <h3 class="text-lg font-semibold">
+         Game joiner
+        </h3>
+        <p class="mt-2 text-[13px] font-normal leading-relaxed text-muted-foreground">
+         Less searching, more playing. Jump straight into your next Roblox adventure.
+        </p>
+        <span class="tool-action">
+         Join a game
+         <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10">
+          </path>
+          <path d="M7 17 17 7">
+          </path>
+         </svg>
+        </span>
+       </article>
+      </a>
+     </div>
+     <div class="mt-8 flex flex-wrap items-center justify-center gap-x-9 gap-y-4 text-xs text-muted-foreground">
+      <span class="flex items-center gap-2">
+       <svg aria-hidden="true" class="lucide lucide-shield-check text-highlight" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+        </path>
+        <path d="m9 12 2 2 4-4">
+        </path>
+       </svg>
+       Your account stays yours
+      </span>
+      <span class="flex items-center gap-2">
+       <svg aria-hidden="true" class="lucide lucide-zap text-amber" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
+        </path>
+       </svg>
+       Less friction. More creating.
+      </span>
+      <span class="flex items-center gap-2">
+       <svg aria-hidden="true" class="lucide lucide-heart text-rose" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+        </path>
+       </svg>
+       Built with creators in mind
+      </span>
+     </div>
+    </section>
+    <section class="section-line">
+     <div class="site-width flex flex-col items-center gap-4 py-12 text-center">
+      <span class="eyebrow">
+       YOU&rsquo;RE NOT BUILDING ALONE
+      </span>
+      <h2 class="text-2xl font-semibold">
+       Every great game starts with someone like you.
+      </h2>
+      <p class="max-w-xl text-sm leading-7 text-muted-foreground">
+       The blank canvas. The game nobody&rsquo;s found yet. The idea that won&rsquo;t quite click.
+       <br class="hidden md:block">
+       We know the feeling. Your creativity deserves a chance to go further.
+      </p>
+      <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary underline-offset-4 hover:underline h-9 px-4 py-2" href="/following">
+       Let&rsquo;s make your next move
+       <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12h14">
+        </path>
+        <path d="m12 5 7 7-7 7">
+        </path>
+       </svg>
+      </a>
+     </div>
+    </section>
+   </main>
+   <footer class="section-line">
+    <div class="site-width flex flex-wrap items-center justify-between gap-4 py-6">
+     <span class="font-display text-lg font-bold">
+      blox
+      <span class="text-highlight">
+       lab.
+      </span>
+     </span>
+     <p class="text-[11px] text-muted-foreground">
+      Independent creator toolkit. Not affiliated with Roblox Corporation.
+     </p>
+     <span class="text-[11px] text-muted-foreground">
+      &copy; 2026 BloxLab
+     </span>
+    </div>
+   </footer>
+  </div>
+  <div class="about-overlay" data-about-overlay hidden>
+   <div aria-describedby="about-description" aria-labelledby="about-title" aria-modal="true" class="about-dialog" role="dialog" tabindex="-1">
+    <span class="eyebrow">
+     FOR THE NEXT GENERATION OF CREATORS
+    </span>
+    <h2 class="font-semibold tracking-tight font-display text-2xl" id="about-title">
+     Big ideas shouldn&rsquo;t feel out of reach.
+    </h2>
+    <p class="text-sm text-muted-foreground leading-7" id="about-description">
+     Finding an audience, starting a new game, or making your first outfit can feel overwhelming. BloxLab brings practical plans and official Roblox resources together, so you can spend more time creating and playing.
+    </p>
+    <p class="text-sm leading-6 text-muted-foreground">
+     No fake visits. No stolen creations. No verification shortcuts. Just a little support for your next chapter.
+    </p>
+    <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/85 h-9 px-4 py-2" data-explore-toolkit type="button">
+     Explore the toolkit
+     <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12h14">
+      </path>
+      <path d="m12 5 7 7-7 7">
+      </path>
+     </svg>
+    </button>
+    <button aria-label="Close" class="about-close" data-close-about type="button">
+     <svg aria-hidden="true" class="lucide lucide-x h-4 w-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6 6 18">
+      </path>
+      <path d="m6 6 12 12">
+      </path>
+     </svg>
+     <span class="sr-only">
+      Close
+     </span>
+    </button>
+   </div>
+  </div>
+  <script defer src="/assets/app.js">
+  </script>
+ </body>
 </html>

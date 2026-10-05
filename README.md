@@ -4,10 +4,10 @@ A readable, dependency-free BloxLab creator-toolkit website.
 
 ## Main source files
 
-- `index.html` contains the shared document shell.
-- `assets/app.js` contains the landing page, tool-page content, navigation, and demo behavior.
-- `assets/styles.css` contains all responsive styling.
-- Each tool directory contains a direct-route `index.html` document.
+- `index.html` contains the fully formatted landing-page markup.
+- Each tool directory contains its fully formatted direct-route page.
+- `assets/app.js` contains the menu, dialog, and safe demo interactions.
+- `assets/styles.css` contains the original visual system, formatted with one declaration per line.
 
 ## Local preview
 
