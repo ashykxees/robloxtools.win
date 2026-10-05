@@ -126,9 +126,26 @@ function bindAboutDialog() {
     });
 
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !overlay.hidden) {
-            closeDialog();
+        if (overlay.hidden) {
+            return;
         }
+
+        if (event.key === "Escape") {
+            closeDialog();
+            return;
+        }
+
+        if (event.key !== "Tab") {
+            return;
+        }
+
+        const controls = [exploreButton, closeButton];
+        const currentIndex = controls.indexOf(document.activeElement);
+        const direction = event.shiftKey ? -1 : 1;
+        const nextIndex = (currentIndex + direction + controls.length) % controls.length;
+
+        event.preventDefault();
+        controls[nextIndex].focus();
     });
 }
 

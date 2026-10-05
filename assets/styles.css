@@ -2592,3 +2592,8 @@
         display: none;
     }
 }
+
+.brand-name {
+    display: inline-flex;
+    align-items: baseline;
+}
