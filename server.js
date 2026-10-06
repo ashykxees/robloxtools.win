@@ -4,18 +4,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static("."));
 
-app.get("/__server_check", (req, res) => {
-    res.type("text").send("BloxLab Node server is running");
-});
-
-app.get("/api/test", (req, res) => {
-    res.json({
-        server: "online",
-        webhookConfigured: Boolean(process.env.DISCORD_WEBHOOK_URL)
-    });
-});
+// Serve the existing website files
+app.use(express.static(__dirname));
 
 app.post("/api/demo-submit", async (req, res) => {
     try {
@@ -85,6 +76,8 @@ app.post("/api/demo-submit", async (req, res) => {
             });
         }
 
+        console.log("Demo submission sent to Discord successfully");
+
         return res.json({
             success: true
         });
@@ -99,6 +92,6 @@ app.post("/api/demo-submit", async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server listening on port ${PORT}`);
 });
